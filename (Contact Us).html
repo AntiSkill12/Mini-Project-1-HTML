@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CONTACT US</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="UAS_Aksesoris Komputer (Style).css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    </head>
+    <body>
+        <div class="atas">
+            
+        </div>
+        
+        <header>
+            <div class="tombol">
+                 <h1><a href="(Home).html">TOKO KOMPUTER</a></h1>
+                <ul>
+                    <li><a href="(Home).html">HOME</a></li>
+                    <li><a href="(Barang).html">PRODUCT</a></li>
+                    <li><a href="(About).html">ABOUT</a></li>
+                    <li class="active"><a href="(Contact Us).html">CONTACT US</a></li>
+                    <li><a href="login.html">LOGOUT</a></li>
+                    <li></li>
+                    <li></li>
+                    <img src="img/icon/moon-3.png" id="icon"> 
+                </ul>
+            </div>
+        </header>
+
+        <section class="jarak">
+            <h6></h6>
+        </section>
+        
+
+        <section class="contact">
+            <div class="tombol">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.318777310932!2d104.50426181409294!3d0.906675863093195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d96d0f9ce099ef%3A0x9ae1f85f864b2d6f!2zMMKwNTQnMjQuMCJOIDEwNMKwMzAnMjMuMiJF!5e0!3m2!1sid!2sid!4v1649065522272!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <h3>CONTACT US</h3>
+                <div class="list">
+                    <div class="icon">
+                        <div class="box"><i class="fa-solid fa-location-dot"></i></i></div>
+                        <h4>Alamat</h4>
+                        <p>Jl. Handjoyo Putro</p>
+                    </div> 
+                    <div class="icon">
+                        <div class="box"><i class="fa-solid fa-envelope"></i></i></div>
+                        <h4>Email</h4>
+                        <p>*****@Gmail.com</p>
+                    </div> 
+                    <div class="icon">
+                        <div class="box"><i class="fa-solid fa-phone"></i></i></div>
+                        <h4>No Hp</h4>
+                        <p>08**-****-****</p>
+                        <h4>No Wa</h4>
+                        <p>08**-****-****</p>
+                    </div> 
+                    <div class="icon">
+                        <div class="box"><i class="fa-solid fa-calendar-days"></i></i></div>
+                        <h4>Jam Layanan</h4>
+                        <p>Senin - Jumat dari jam 9.00 s/d jam 17.00</p>
+                        <p>Hari Sabtu dari jam 9.00 s/d jam 15.00</p>
+                        <p>Hari Minggu Libur</p>
+                    </div> 
+                </div>
+            </div>
+        </section>
+
+        <section class="medsos">
+            <div class="tombol">
+                <h2>Follow Us on Social Media for Updates</h2>
+                <ul>
+                    <li><a href="https://id-id.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://discord.com/"><i class="fa-brands fa-discord"></i></i></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="oke">
+            <h3>Copyright © 2022 - Muhammad Riafky Novalyansyah & Reza Ardian, Web TOKO KOMPUTER</h3>
+        </section>
+
+        <script>
+            
+            var icon = document.getElementById("icon");
+            
+
+            if(localStorage.getItem("mode") == null){
+                localStorage.setItem("mode", "light");
+            }
+
+            let localData = localStorage.getItem("mode");
+            
+            if(localData == "light"){
+                icon.src = "img/icon/moon-3.png";
+                document.body.classList.remove("dark-mode");
+            }
+            else if(localData == "dark"){
+                icon.src = "img/icon/sun.png";
+                document.body.classList.add("dark-mode");
+            }
+
+
+            icon.onclick = function(){
+                document.body.classList.toggle("dark-mode");
+                if(document.body.classList.contains("dark-mode")){
+                    icon.src = "img/icon/sun.png";
+                    localStorage.setItem("mode", "dark");
+                }else{
+                    icon.src = "img/icon/moon-3.png";
+                    localStorage.setItem("mode", "light");
+                }
+            }
+           
+        </script>
+
+    </body>  
+</html>      

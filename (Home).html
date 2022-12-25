@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home Page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="UAS_Aksesoris Komputer (Style).css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    </head>
+    <body>
+         <div class="atas">
+        </div>
+        
+        <header>
+            <div class="tombol">
+                 <h1><a href="(Home).html">TOKO KOMPUTER</a></h1>
+                <ul>
+                    <li class="active"><a href="(Home).html">HOME</a></li>
+                    <li><a href="(Barang).html">PRODUCT</a></li>
+                    <li><a href="(About).html">ABOUT</a></li>
+                    <li><a href="(Contact Us).html">CONTACT US</a></li>
+                    <li><a href="login.html">LOGOUT</a></li>
+                    <li></li>
+                    <li></li>
+                    <img src="img/icon/moon-3.png" id="icon">
+                </ul>
+            </div>
+        </header>
+        
+        <section class="banner">
+            <h2>WELCOME TO MY <br> 
+                ONLINE SHOP </h2>
+        </section>
+        
+        <section class="about">
+            <div class="tombol">
+                <h3>ABOUT </h3>
+                <div class="posisi">
+                   <P>Website ini dibuat untuk memenuhi tugas UAS MINI PROJECT 1. Kami membuat Website ini dengan Tema TOKO KOMPUTER, 
+                       kami menyadari masih banyak kekurang dalam pembuat Website ini sehingga saran <br>
+                       dan kritik akan membantu. Sekian dari Muhammad Riafky Novalyansyah & Reza Ardian Terima Kasih.</P>
+                </div>   
+            </div>   
+        </section>
+
+        <section class="medsos">
+            <div class="tombol">
+                <h2>Follow Us on Social Media for Updates</h2>
+                <ul>
+                    <li><a href="https://id-id.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://discord.com/"><i class="fa-brands fa-discord"></i></i></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="oke">
+            <h3>Copyright © 2022 - Muhammad Riafky Novalyansyah & Reza Ardian, Web TOKO KOMPUTER</h3>
+        </section>
+
+        <script>
+            
+            var icon = document.getElementById("icon");
+            
+
+            if(localStorage.getItem("mode") == null){
+                localStorage.setItem("mode", "light");
+            }
+
+            let localData = localStorage.getItem("mode");
+            
+            if(localData == "light"){
+                icon.src = "img/icon/moon-3.png";
+                document.body.classList.remove("dark-mode");
+            }
+            else if(localData == "dark"){
+                icon.src = "img/icon/sun.png";
+                document.body.classList.add("dark-mode");
+            }
+
+
+            icon.onclick = function(){
+                document.body.classList.toggle("dark-mode");
+                if(document.body.classList.contains("dark-mode")){
+                    icon.src = "img/icon/sun.png";
+                    localStorage.setItem("mode", "dark");
+                }else{
+                    icon.src = "img/icon/moon-3.png";
+                    localStorage.setItem("mode", "light");
+                }
+            }
+        </script>
+       
+    </body>        
+</html>
